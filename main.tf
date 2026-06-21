@@ -10,11 +10,11 @@ module "network" {
 module "compute" {
   source = "./modules/compute"
 
-  project_name   = var.project_name
-  instance_type  = var.instance_type
-  subnet_id      = module.network.subnet_id
-  sg_id          = module.network.sg_id
-  ami_id         = "ami-0c2af51e265bd5e0e"
+  project_name  = var.project_name
+  instance_type = var.instance_type
+  subnet_id     = module.network.subnet_id
+  sg_id         = module.network.sg_id
+  ami_id        = "ami-0c2af51e265bd5e0e"
 }
 
 resource "aws_s3_bucket" "bucket" {
